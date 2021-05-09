@@ -44,8 +44,8 @@ import {DragNdropDirective} from './dragNdrop.directive';
 import {ImporterComponent} from './views/add-deliveries/dragNdrop/importer/importer.component';
 
 
-// const BACKEND_ROOT_URL = 'https://command-project-warehouse.herokuapp.com/api/v1';
-const BACKEND_ROOT_URL = 'http://localhost:8189/api/v1';
+const BACKEND_ROOT_URL = 'https://i4rb.herokuapp.com/';
+// const BACKEND_ROOT_URL = 'http://localhost:8189/api/v1';
 
 registerLocaleData(localeRu);
 
