@@ -39,9 +39,18 @@
                   </mat-footer-cell>
                 </ng-container>
 
+                <ng-container matColumnDef="nodata">
+                  <mat-footer-cell *matFooterCellDef colspan="0">
+                    Нет записей
+                  </mat-footer-cell>
+                </ng-container>
+
                 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                 <mat-row (click)="editBrand(row)" *matRowDef="let row; columns: displayedColumns;"></mat-row>
-                <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':dataSource!=null && dataSource.data.length!=0}"></mat-footer-row>
+                <mat-footer-row *matFooterRowDef="['loading']"
+                                [ngClass]="{'hide':dataSource!=null}"></mat-footer-row>
+                <mat-footer-row *matFooterRowDef="['nodata']"
+                                [ngClass]="{'hide':!(dataSource==null || dataSource.data.length==0)}"></mat-footer-row>
               </mat-table>
             </div>
           </div>
